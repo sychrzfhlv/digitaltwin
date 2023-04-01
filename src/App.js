@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Sidebar from './components/Sidebar/Sidebar.jsx'
+import Home from './pages/Home/Home.jsx'
+import Exhaust from './pages/Exhaust/Exhaust.jsx'
+import Fuel from './pages/Fuel/Fuel.jsx'
+import Cooling from './pages/Cooling/Cooling.jsx'
+import Rpm from './pages/Rpm/Rpm.jsx'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='main-container'>
+    <BrowserRouter>
+      <Sidebar>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/exhaust' element={<Exhaust />} />
+          <Route path='/fuel' element={<Fuel />} />
+          <Route path='/cooling' element={<Cooling />} />
+          <Route path='/rpm' element={<Rpm />} />
+        </Routes>
+      </Sidebar>
+    </BrowserRouter>
     </div>
   );
 }
