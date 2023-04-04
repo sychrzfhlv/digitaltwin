@@ -9,7 +9,7 @@ const Fuel = () => {
       nrOfLevels={20}
       percent={0.23}
       textColor={'#000000'}
-      marginInPercent = {0.1}
+      marginInPercent = {0.13}
       />
     </div>
   )

@@ -12,7 +12,7 @@ const Exhaust = () => {
       arcPadding={0.02}
       percent={0.4}
       textColor={'#000000'}
-      marginInPercent = {0.1}
+      marginInPercent = {0.13}
       />
     </div>
   )

@@ -11,7 +11,7 @@ const Cooling = () => {
       percent={0.5}
       needleColor="red"
       textColor="black"
-      marginInPercent = {0.1}
+      marginInPercent = {0.13}
       />
     </div>
   )
