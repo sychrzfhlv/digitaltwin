@@ -1,7 +1,7 @@
 .rpm-container{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    /* width: 100%; */
     justify-content: center;
 }
 
@@ -152,6 +152,9 @@
     z-index: 100;
     flex-direction: row;
     justify-content: center;
+    position: absolute;
+    top: 450px;
+    right: 80px;
 }
 
 .accelerate-container button{
