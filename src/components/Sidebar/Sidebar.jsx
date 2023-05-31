@@ -38,6 +38,11 @@ const Sidebar = ({children}) => {
     name:"Rpm",
     icon:<SlSpeedometer/>
     },
+    {
+      path:'/all',
+      name:'View all',
+      icon:<RiTempColdLine />
+    }
     
   ]
   return (
