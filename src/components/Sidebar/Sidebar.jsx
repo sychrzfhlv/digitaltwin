@@ -5,6 +5,7 @@ import { BsWind } from 'react-icons/bs'
 import { RiGasStationFill } from 'react-icons/ri'
 import { FaBars } from 'react-icons/fa'
 import { SlSpeedometer } from 'react-icons/sl'
+import { BsArrowRightCircleFill } from 'react-icons/bs'
 import { NavLink } from 'react-router-dom'
 import { RiTempColdLine } from 'react-icons/ri'
 
@@ -39,6 +40,11 @@ const Sidebar = ({children}) => {
     icon:<SlSpeedometer/>
     },
     {
+      path:"/servo",
+      name:"Servo",
+      icon:<BsArrowRightCircleFill/>
+      },
+    {
       path:'/all',
       name:'View all',
       icon:<RiTempColdLine />
@@ -47,7 +53,7 @@ const Sidebar = ({children}) => {
   ]
   return (
     <div className='containers'>
-      <div style={{width : isOpen ? "200px" : "50px"}} className="sidebar">
+      <div style={{width : isOpen ? "13%" : "4%"}} className="sidebar">
         <div className="top_section">
           <h6 style={{display : isOpen ? "block" : "none"}} className="logo">Digital Twin</h6>
           <div style={{marginLeft : isOpen ? "50px" : "0px"}} className="bars">

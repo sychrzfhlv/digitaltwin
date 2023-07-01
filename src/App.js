@@ -6,7 +6,8 @@ import Exhaust from './pages/Exhaust/Exhaust.jsx'
 import Fuel from './pages/Fuel/Fuel.jsx'
 import Cooling from './pages/Cooling/Cooling.jsx'
 import Rpm from './pages/Rpm/Rpm.jsx'
-import All from './pages/All'
+import Servo from './pages/Servo/Servo.jsx'
+import All from './pages/All/All'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path='/fuel' element={<Fuel />} />
           <Route path='/cooling' element={<Cooling />} />
           <Route path='/rpm' element={<Rpm />} />
+          <Route path='/servo' element={<Servo />} />
           <Route path='/all' element={<All />} />
         </Routes>
       </Sidebar>

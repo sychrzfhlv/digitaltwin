@@ -1,19 +1,31 @@
 import React from 'react'
 import './Exhaust.css'
-import GaugeChart from 'react-gauge-chart'
+import { Chart } from 'react-google-charts';
 
 const Exhaust = () => {
   return (
     <div className='exhaust-container'>
-      <GaugeChart className='gauge-chart'
-      nrOfLevels={20}
-      arcsLength={[0.3, 0.5, 0.2]}
-      colors={['#5BE12C', '#F5CD19', '#EA4228']}
-      arcPadding={0.02}
-      percent={0.4}
-      textColor={'#000000'}
-      marginInPercent = {0.13}
-      />
+      <Chart className='gauge-chart'
+        width={'200px'}
+        height={'200px'}
+        chartType="Gauge"
+        loader={<div>Exhaust Chart</div>}
+        data={[
+          ['Label', 'Value'],
+          ['Exhaust', 70]
+        ]}
+        options={{
+          max:300,
+          majorTicks: ['0','50','100','150','200','250','300'],
+          greenFrom:0,
+          greenTo:225,
+          yellowFrom: 225,
+          yellowTo: 270,
+          redFrom: 270,
+          redTo:300,
+          minorTicks: 10,
+        }}
+        />
     </div>
   )
 }
