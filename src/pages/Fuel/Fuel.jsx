@@ -1,8 +1,28 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import './Fuel.css'
 import Chart from 'react-google-charts'
+import axios from 'axios'
 
 const Fuel = () => {
+
+  const Getrealtime = 'http://localhost:8000/api';
+  const [fuelValue, setFuelValue] = useState(0);
+  const getfuel = async () => 
+  {
+    try {
+      const response = await axios.get(`${Getrealtime}/antares`);
+      const value = parseInt(response["data"]["record"]["fuel"]) 
+      setFuelValue(value)
+      console.log(fuelValue)
+    } catch (e) {
+      console.log(e.message);
+    }
+  }
+
+  useEffect(() => {
+    getfuel();
+  }, )
+
   return (
     <div className='fuel-container'>
       <Chart className='gauge-chart'
@@ -12,7 +32,7 @@ const Fuel = () => {
         loader={<div>Fuel Chart</div>}
         data={[
           ['Label', 'Value'],
-          ['Fuel', 70]
+          ['Fuel', fuelValue]
         ]}
         options={{
           max:250,

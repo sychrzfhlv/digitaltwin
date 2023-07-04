@@ -1,8 +1,28 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import './Rpm.css'
 import { Chart } from 'react-google-charts';
+import axios from 'axios'
 
 const Rpm = () => {
+
+  const Getrealtime = 'http://localhost:8000/api';
+  const [rpmValue, setRpmValue] = useState(0);
+  const getrpm = async () => 
+  {
+    try {
+      const response = await axios.get(`${Getrealtime}/antares`);
+      const value = parseInt(response["data"]["record"]["rpm"]) 
+      setRpmValue(value)
+      console.log(rpmValue)
+    } catch (e) {
+      console.log(e.message);
+    }
+  }
+
+  useEffect(() => {
+    getrpm();
+  }, )
+
   return (
     <div className='exhaust-container'>
       <Chart className='gauge-chart'
@@ -12,7 +32,7 @@ const Rpm = () => {
         loader={<div>Exhaust Chart</div>}
         data={[
           ['Label', 'Value'],
-          ['Rpm', 70]
+          ['Rpm', rpmValue]
         ]}
         options={{
           max:2500,

@@ -1,8 +1,27 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import './Cooling.css'
 import Chart from 'react-google-charts'
+import axios from 'axios'
 
 const Cooling = () => {
+  const Getrealtime = 'http://localhost:8000/api';
+  const [coolingValue, setCoolingValue] = useState(0);
+  const getcooling = async () => 
+  {
+    try {
+      const response = await axios.get(`${Getrealtime}/antares`);
+      const value = parseInt(response["data"]["record"]["cooling"]) 
+      setCoolingValue(value)
+      console.log(coolingValue)
+    } catch (e) {
+      console.log(e.message);
+    }
+  }
+
+  useEffect(() => {
+    getcooling();
+  }, ) 
+
   return (
     <div className='cooling-container'>
       <Chart 
@@ -12,7 +31,7 @@ const Cooling = () => {
         loader={<div>Cooling Chart</div>}
         data={[
           ['Label', 'Value'],
-          ['Cooling', 70]
+          ['Cooling', coolingValue]
         ]}
         options={{
           max:150,

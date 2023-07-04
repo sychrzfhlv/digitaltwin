@@ -1,2 +1,2 @@
-.container > div {border:1px solid black;}
-.row > div {border:1px solid black;}
+.container > div {border:1px solid transparent;}
+.row > div {border:1px solid transparent;}
