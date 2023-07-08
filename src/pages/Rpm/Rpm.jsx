@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import './Rpm.css'
 import { Chart } from 'react-google-charts';
 import axios from 'axios'
 

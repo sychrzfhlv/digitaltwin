@@ -19,37 +19,46 @@ const Sidebar = ({children}) => {
       name:"Home",
       icon:<HiOutlineHome/>
     },
+    // {
+    //   path:"/exhaust",
+    //   name:"Exhaust",
+    //   icon:<BsWind/>
+    // },
+    // {
+    //   path:"/fuel",
+    //   name:"Fuel",
+    //   icon: <RiGasStationFill/>
+    // },
+    // {
+    //   path:"/cooling",
+    //   name:"Cooling",
+    //   icon:<RiTempColdLine/>
+    // },
+    // {
+    // path:"/rpm",
+    // name:"Rpm",
+    // icon:<SlSpeedometer/>
+    // },
+    // {
+    //   path:"/servo",
+    //   name:"Servo",
+    //   icon:<BsArrowRightCircleFill/>
+    //   },
     {
-      path:"/exhaust",
-      name:"Exhaust",
-      icon:<BsWind/>
-    },
-    {
-      path:"/fuel",
-      name:"Fuel",
-      icon: <RiGasStationFill/>
-    },
-    {
-      path:"/cooling",
-      name:"Cooling",
-      icon:<RiTempColdLine/>
-    },
-    {
-    path:"/rpm",
-    name:"Rpm",
-    icon:<SlSpeedometer/>
-    },
-    {
-      path:"/servo",
-      name:"Servo",
-      icon:<BsArrowRightCircleFill/>
-      },
-    {
-      path:'/all',
-      name:'View all',
+      path:'/dashboard',
+      name:'Dashboard',
       icon:<RiTempColdLine />
+    },
+    {
+      path:'/details',
+      name:'Details',
+      icon:<SlSpeedometer />
+    },
+    {
+      path:'/about',
+      name:'About',
+      icon:<BsWind />
     }
-    
   ]
   return (
     <div className='containers'>

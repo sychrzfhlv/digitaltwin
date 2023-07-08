@@ -1,0 +1,32 @@
+.accelerate-container{
+    display: flex;
+    gap: 1rem;
+}
+
+.increase{
+    padding: 10px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background-color: rgba(0, 200, 0, 0.9);
+    border: 2px solid black;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.decrease{
+    padding: 10px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background-color: rgba(200, 0, 0, 0.9);
+    border: 2px solid black;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.increase:hover{
+    background-color: rgba(0, 255, 0, 0.5);
+}
+
+.decrease:hover{
+    background-color: rgba(255, 0, 0, 0.5);
+}

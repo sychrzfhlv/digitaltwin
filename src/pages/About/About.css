@@ -1,31 +1,33 @@
-.home-container{
+.about-container{
     display: flex;
-    width: 100%;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    gap: 2.5rem;
 }
 
 .section{
     display: flex;
-    align-items:center ;
     width: 100%;
     justify-content: center;
+    align-items: center;
 }
 
-.home__container{
+.about__container{
     display: flex;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     align-items: center;
     justify-content: center;
-    width: 70%;
+    width: 100%;
 }
 
-.home{
+.about{
     width: 20%;
     height: 20%;
 }
 
-.home__item{
+.about__item{
     background: rgb(199, 0, 57, 0.06);
     padding: 1.3rem;
     border-radius: 2rem;
@@ -34,40 +36,41 @@
 
 img{
     display: flex;
-    align-items: center;
     justify-content: center;
-    width: 30%;
-    height: 30%;
+    align-items: center;
+    width: 35%;
+    height: 35%;
 }
 
-.home__item:hover{
+.about__item:hover{
     border-color: black;
     background: transparent;
 }
 
-.home__item-image{
+.about__item-image{
     border-radius: 1.5rem;
     overflow: hidden;
 }
 
-.home__item h3{
+.about__item h3{
     margin: 1.2rem 0 2rem;
 }
 
-.home__item-cta{
+.about__item-cta{
     display: flex;
     gap: 1rem;
     margin-bottom: 1rem;
 }
 
-.home-des{
-    width: 15rem;
+.des{
+    width: 8rem;
     height: 5rem;
 }
 
+
 /* ========================= MEDIA QUERRIES (MEDIUM DEVICE) ==================== */
 /* @media screen and (max-width: 1024px) {
-    .home__container{
+    .portofolio__container{
         grid-template-columns: 1fr 1fr;
         gap: 1.2rem;
     }
@@ -75,59 +78,8 @@ img{
   
   /* ========================= MEDIA QUERRIES (SMALL DEVICE) ==================== */
 /* @media screen and (max-width: 600px) {
-    .home__container{
+    .portofolio__container{
         grid-template-columns: 1fr;
         gap: 1rem;
     }
 } */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .home-container{
-    display: flex;
-    width: 100%;
-    flex-direction: column ;
-}
-
-.picture-container{
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
-}
-
-.diesel-pic{
-    border: 1px solid transparent;
-    border-radius: 3%;
-    margin-top: 10px;
-    padding: 10px;
-}
-
-.spec-container{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-gap: 10px;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    height: 60%;
-}
-
-.card-spec{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    margin: 10px;
-    padding: 15px 0;
-    text-align: center;
-}
- */

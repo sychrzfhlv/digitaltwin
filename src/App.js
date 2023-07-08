@@ -7,7 +7,9 @@ import Fuel from './pages/Fuel/Fuel.jsx'
 import Cooling from './pages/Cooling/Cooling.jsx'
 import Rpm from './pages/Rpm/Rpm.jsx'
 import Servo from './pages/Servo/Servo.jsx'
-import All from './pages/All/All'
+import Dashboard from './pages/Dashboard/Dashboard.jsx'
+import Details from './pages/Details/Details'
+import About from './pages/About/About'
 
 function App() {
   return (
@@ -16,12 +18,9 @@ function App() {
       <Sidebar>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/exhaust' element={<Exhaust />} />
-          <Route path='/fuel' element={<Fuel />} />
-          <Route path='/cooling' element={<Cooling />} />
-          <Route path='/rpm' element={<Rpm />} />
-          <Route path='/servo' element={<Servo />} />
-          <Route path='/all' element={<All />} />
+          <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='details' element={<Details />} />
+          <Route path='about' element={<About />} />
         </Routes>
       </Sidebar>
     </BrowserRouter>

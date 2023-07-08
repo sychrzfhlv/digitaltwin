@@ -1,29 +1,48 @@
-import React from 'react'
-import './Servo.css'
+import React, {useEffect, useState} from 'react'
 import Chart from 'react-google-charts'
+import axios from 'axios'
 
 const Servo = () => {
+
+  const Getrealtime = 'http://localhost:8000/api';
+  const [servoValue, setServoValue] = useState(0);
+  const getservo = async () => 
+  {
+    try {
+      const response = await axios.get(`${Getrealtime}/antares`);
+      const value = parseInt(response["data"]["record"]["servo"]) 
+      setServoValue(value)
+      console.log(servoValue)
+    } catch (e) {
+      console.log(e.message);
+    }
+  }
+
+  useEffect(() => {
+    getservo();
+  }, )
+
   return (
-    <div className='servo-container'>
+    <div className='fuel-container'>
       <Chart className='gauge-chart'
-        width={'150px'}
-        height={'150px'}
+        width={'200px'}
+        height={'200px'}
         chartType="Gauge"
-        loader={<div>Servo Chart</div>}
+        loader={<div>Fuel Chart</div>}
         data={[
           ['Label', 'Value'],
-          ['Servo', 70]
+          ['Servo', servoValue]
         ]}
         options={{
-          max:180,
-          majorTicks: ['0','30','60','90','120','150', '180'],
-          greenFrom: 0,
-          greenTo: 90,
-          yellowFrom: 90,
+          max:250,
+          majorTicks: ['0','50','100','150','200','250'],
+          redFrom: 0,
+          redTo:50,
+          yellowFrom: 50,
           yellowTo: 150,
-          redFrom: 150,
-          redTo:180,
-          minorTicks: 6,
+          greenFrom:150,
+          greenTo:250,
+          minorTicks: 25,
       }}
       />
     </div>
@@ -31,6 +50,81 @@ const Servo = () => {
 }
 
 export default Servo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, {useState, useEffect} from 'react'
+// import './Servo.css'
+// import Chart from 'react-google-charts'
+
+// const Servo = () => {
+  
+//   return (
+//     <div className='servo-container'>
+//       <Chart className='gauge-chart'
+//         width={'150px'}
+//         height={'150px'}
+//         chartType="Gauge"
+//         loader={<div>Servo Chart</div>}
+//         data={[
+//           ['Label', 'Value'],
+//           ['Servo', 70]
+//         ]}
+//         options={{
+//           max:180,
+//           majorTicks: ['0','30','60','90','120','150', '180'],
+//           greenFrom: 0,
+//           greenTo: 90,
+//           yellowFrom: 90,
+//           yellowTo: 150,
+//           redFrom: 150,
+//           redTo:180,
+//           minorTicks: 6,
+//       }}
+//       />
+//     </div>
+//   )
+// }
+
+// export default Servo
+
 
 
 
@@ -127,15 +221,15 @@ export default Servo
 //       <div className="accelerate-container">
 //         <button className='increase' onClick={() => { 
 //           if(displaySpeed < 180) {
-//             setSpeed(1);
-//             setDisplaySpeed(displaySpeed + 1);
+//             setSpeed(5);
+//             setDisplaySpeed(displaySpeed + 5);
 //           };
 //           }}>Increase Speed
 //         </button>
 //         <button className='decrease' onClick={() => { 
 //           if(speed > 0) {
-//             setSpeed(-1);
-//             setDisplaySpeed(displaySpeed - 1);
+//             setSpeed(-5);
+//             setDisplaySpeed(displaySpeed - 5);
 //           };
 //           }}>Decrease Speed
 //         </button>

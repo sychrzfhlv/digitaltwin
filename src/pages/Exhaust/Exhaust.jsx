@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react'
-import './Exhaust.css'
 import { Chart } from 'react-google-charts';
 import axios from 'axios'
 
@@ -37,10 +36,10 @@ const Exhaust = () => {
           max:300,
           majorTicks: ['0','50','100','150','200','250','300'],
           greenFrom:0,
-          greenTo:225,
-          yellowFrom: 225,
-          yellowTo: 270,
-          redFrom: 270,
+          greenTo:200,
+          yellowFrom: 200,
+          yellowTo: 250,
+          redFrom: 250,
           redTo:300,
           minorTicks: 10,
         }}

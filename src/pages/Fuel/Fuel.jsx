@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react'
-import './Fuel.css'
 import Chart from 'react-google-charts'
 import axios from 'axios'
 

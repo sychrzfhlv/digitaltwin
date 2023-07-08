@@ -1,0 +1,70 @@
+.dashboard-container{
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+
+.page{
+    /* height: 6000px;  */
+     overflow: auto;
+    margin-inline: auto;
+
+   
+}
+
+
+.yanmar{
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
+    top: 1rem;
+    bottom: 10rem;
+    margin-left: 10rem;
+}
+
+.gauge-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gauge1{
+    
+    left: 25rem;
+    top: 5rem;
+    display: flex;
+    position: absolute;
+   
+}
+
+.gauge2{
+    display: flex;
+    position: absolute;
+    left: 25rem;
+    top: 17rem;
+    gap: 1px;
+}
+
+.button{
+    display: flex;
+    align-items: baseline;
+ 
+}
+
+.chartjs{
+    position: absolute;
+    display: flex;
+    top: 600px;
+    left: 50px;
+    gap: 90px;
+
+}
+
+.chartjs2{
+    position: absolute;
+    display: flex;
+    top: 900px;
+    left: 50px;
+    gap: 90px;
+
+}
