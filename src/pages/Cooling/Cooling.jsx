@@ -3,7 +3,7 @@ import Chart from 'react-google-charts'
 import axios from 'axios'
 
 const Cooling = () => {
-  const Getrealtime = 'http://localhost:8000/api';
+  const Getrealtime = 'http://103.175.219.228/api';
   const [coolingValue, setCoolingValue] = useState(0);
   const getcooling = async () => 
   {

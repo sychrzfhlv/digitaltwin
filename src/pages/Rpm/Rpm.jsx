@@ -4,7 +4,7 @@ import axios from 'axios'
 
 const Rpm = () => {
 
-  const Getrealtime = 'http://localhost:8000/api';
+  const Getrealtime = 'http://103.175.219.228/api';
   const [rpmValue, setRpmValue] = useState(0);
   const getrpm = async () => 
   {

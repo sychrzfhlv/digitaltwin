@@ -1,7 +1,7 @@
 {
   "name": "engine-monitoring",
   "version": "0.1.0",
-  "homepage": "https://sychrzfhlv.github.io/digitaltwin",
+  "homepage": "https://sychrzfhlv.github.io/digitaltwin", 
   "private": true,
   "dependencies": {
     "@syncfusion/ej2-react-circulargauge": "^20.4.48",

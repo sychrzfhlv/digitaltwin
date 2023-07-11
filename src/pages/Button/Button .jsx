@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Button.css'
 import axios from 'axios';
 
-const Getrealtime = 'http://localhost:8000/api'; 
+const Getrealtime = 'http://103.175.219.228/api'; 
 
 const Button = () => {
   const [servoValue, setServoValue] = useState(0);

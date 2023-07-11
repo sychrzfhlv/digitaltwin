@@ -4,7 +4,7 @@ import axios from 'axios'
 
 const Fuel = () => {
 
-  const Getrealtime = 'http://localhost:8000/api';
+  const Getrealtime = 'http://103.175.219.228/api';
   const [fuelValue, setFuelValue] = useState(0);
   const getfuel = async () => 
   {
