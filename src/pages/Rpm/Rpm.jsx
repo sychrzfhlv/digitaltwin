@@ -4,7 +4,7 @@ import axios from 'axios'
 
 const Rpm = () => {
 
-  const Getrealtime = 'http://103.175.219.228/api';
+  const Getrealtime = 'https://dtdigitaltwin.my.id/api';
   const [rpmValue, setRpmValue] = useState(0);
   const getrpm = async () => 
   {

@@ -4,7 +4,7 @@ import axios from 'axios'
 
 const Servo = () => {
 
-  const Getrealtime = 'http://103.175.219.228/api';
+  const Getrealtime = 'https://dtdigitaltwin.my.id/api';
   const [servoValue, setServoValue] = useState(0);
   const getservo = async () => 
   {
